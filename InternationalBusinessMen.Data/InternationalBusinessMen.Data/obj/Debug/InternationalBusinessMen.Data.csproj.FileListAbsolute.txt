@@ -1,0 +1,12 @@
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\InternationalBusinessMen.Data.dll.config
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\InternationalBusinessMen.Data.dll
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\InternationalBusinessMen.Data.pdb
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\EntityFramework.dll
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\EntityFramework.xml
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\obj\Debug\InternationalBusinessMen.Data.csproj.CoreCompileInputs.cache
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\obj\Debug\InternationalBusinessMen.Data.csproj.CopyComplete
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\obj\Debug\InternationalBusinessMen.Data.dll
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\obj\Debug\InternationalBusinessMen.Data.pdb
+C:\Users\jmdon\Documents\GitHub\InternationalBusinessMen\InternationalBusinessMen.Data\InternationalBusinessMen.Data\obj\Debug\InternationalBusinessMen.Data.csprojAssemblyReference.cache

@@ -1,0 +1,104 @@
+﻿@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@model InternationalBusinessMen.API.Models.IndexModel
+
+<div class="row">
+
+    <h5><b>Búsqueda de transacciones por SKU</b></h5>
+
+    <form method="post" class="form-inline">
+
+        @if (@Model.SearchString != null)
+        {
+            <input type="text" maxlength="5" class="form-control" disabled aria-label="Sizing example input" name="SearchString" placeholder="@Model.SearchString" aria-describedby="inputGroup-sizing-default" id="skuSearch">
+            <button type="submit" class="btn btn-primary mb-2" value="search">Buscar nuevos datos</button>
+        }
+        else
+        {
+            <input type="text" maxlength="5" class="form-control" aria-label="Sizing example input" name="SearchString" placeholder="@Model.SearchString" aria-describedby="inputGroup-sizing-default" id="skuSearch">
+            <button type="submit" class="btn btn-primary mb-2" value="search">Buscar</button>
+        }
+    </form>
+
+    @if (@Model.SearchString != null)
+    {
+        <hr />
+        if (@Model.Transactions.Any())
+        {
+            <p>
+                <img src="~/Content/check.svg" alt="" width="32" height="32" title="Check">
+                Mostrando <b>@Model.QuantityResult</b> resultado(s) para el SKU <b>@Model.SearchString</b> en EUR
+            </p>
+
+            <div class="alert alert-success" role="alert">
+                El monto total en euros para el producto SKU <b>@Model.SearchString</b> es <b>@Model.TotalInEURAmount</b> €
+            </div>
+        }
+        else
+        {
+            <p>
+                <img src="~/Content/triangle-alert.svg" alt="" width="32" height="32" title="Check">
+                No hay resultados para el SKU <b><u>@Model.SearchString</u></b>
+            </p>
+        }
+    }
+    else if (Model.Transactions.Count != 0)
+    {
+        <hr />
+        <p>
+            <img src="~/Content/check.svg" alt="" width="32" height="32" title="Check">
+            Mostrando <b>@Model.QuantityResult</b> resultado(s).
+            <br />
+            Todos los resultados fueron guardados.
+        </p>
+    }
+    <hr />
+    @if (@Model.Transactions != null && Model.Transactions.Any())
+    {
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Moneda</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (@Model.SearchString != null)
+                {
+                    foreach (var item in @Model.Transactions)
+                    {
+                    <tr>
+                        <th scope="row">#</th>
+                        <td>@item.Sku</td>
+                        <td>@item.EURAmount.ToString("F")</td>
+                        <td>EUR</td>
+                    </tr>
+                    }
+                }
+                else
+                {
+                    foreach (var item in @Model.Transactions)
+                    {
+                        <tr>
+                            <th scope="row">#</th>
+                            <td>@item.Sku</td>
+                            <td>@item.Amount</td>
+                            <td>@item.Currency</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>
+            <img src="~/Content/x-circle.svg" alt="" width="32" height="32" title="Check">
+            No hay transacciones para mostrar.
+        </p>
+    }
+    <hr />
+</div>
